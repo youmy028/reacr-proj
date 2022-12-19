@@ -4,6 +4,7 @@ import Popup from './Popup';
 import ProdListItem from './ProdListItem';
 import ProdList from './ProdList';
 import "./App.css";
+import NoRecord from './NoRecord';
 function App() {
   return (
     <>
@@ -12,8 +13,9 @@ function App() {
       {/* <h1 className="text-3xl font-bold underline text-red-600">Hello world!</h1> */}
       {/* <button className="btn btn-active btn-primary">Button</button> */}
       {/* <Popup/> */}
-      <ProdList className="container mx-auto"/>
-    </>
+      {/*<ProdList className="container mx-auto"/>*/}
+      <NoRecord/>
+    </> 
   );
 }
 
