@@ -15,10 +15,10 @@ function ProdListItem(props){
   return (
     <>
       <div>
-        <div>
+        <div className="flex flex-col gap-[10px]">
           <img src={`https://picsum.photos/id/${imgNo}/400/400`}/>
-          <div>{productName}</div>
-          <div>{productPriceFormatted}</div>
+          <div className="text-center font-bold">{productName}</div>
+          <div className="text-center after:content-['원']">{productPriceFormatted}</div>
         </div>
       </div>  
     </>
