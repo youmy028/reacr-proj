@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-function ProductListItem(props){
+function ProdListItem(props){
   
   // 방법1
   // const {imgNo, name, productPriceFormatted} = props;
@@ -14,16 +14,16 @@ function ProductListItem(props){
   const {imgNo, name:productName, productPriceFormatted} = props;
   return (
     <>
-      <div style={{display:"flex",gap:"10px"}}>
-        <div style={{ display:"inline-flex", flexDirection:"column", gap:"10px" }}>
+      <div>
+        <div>
           <img src={`https://picsum.photos/id/${imgNo}/400/400`}/>
-          <div style={{textAlign:"center", fontWeight:"bold",color:"#454545"}}>{productName}</div>
-          <div style={{textAlign:"center"}}>{productPriceFormatted}</div>
+          <div>{productName}</div>
+          <div>{productPriceFormatted}</div>
         </div>
       </div>  
     </>
   );
 }
 
-export default ProductListItem;
+export default ProdListItem;
  
