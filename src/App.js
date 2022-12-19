@@ -11,11 +11,11 @@ function App() {
       {/* <button className="btn btn-active btn-primary">Button</button> */}
       {/* <Popup/> */}
       <div style={{display:"flex", gap:"10px"}}>
-        <ProductListItem/>
+        <ProductListItem imgNo ={201} name={"MAC BOOK AIR"} productPriceFormatted = {"1,140,000"} />
         
-        <ProductListItem/>
-        
-        <ProductListItem/>
+        <ProductListItem imgNo ={1} name={"MAC BOOK PRO"} productPriceFormatted = {"1,140,000"}/>
+
+        <ProductListItem imgNo ={2} name={"MAC BOOK PRO PLUS"} productPriceFormatted = {"1,140,000"}/>
       </div>
     </>
   );
