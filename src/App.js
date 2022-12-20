@@ -6,6 +6,7 @@ import ProdList from "./ProdList";
 import "./App.css";
 import NoRecord from "./NoRecord";
 import FormEx from "./FormEx";
+import FormEx2 from "./FormEx2 copy";
 function App() {
   return (
     <>
@@ -16,7 +17,8 @@ function App() {
       {/* <Popup/> */}
       {/*<ProdList className="container mx-auto"/>*/}
       {/* <NoRecord/> */}
-      <FormEx />
+      {/* <FormEx /> */}
+      <FormEx2 />
     </>
   );
 }
