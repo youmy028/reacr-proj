@@ -1,33 +1,61 @@
-import React, {useState} from "react";
-function NoRecord(){
+import React, { useState } from "react";
 
+function NoRecord() {
   const [no, setNo] = useState("");
-  
-  
-  const [recordedNos, setRecordedNos] = useState([10,20,30]);
-  const saveNo = () => {
-    if ( no===""){
-      alert("숫자를 입력해주세요");
+  const [recordeNos, setRecordeNos] = useState([10, 20, 30]);
+
+  const saveNo = (e) => {
+    if (no === "") {
+      alert("숫자를 입력해주세요.");
       return;
     }
-    setRecordedNos([...recordedNos, no]);
-    setNo("");
-  }
-  const li = recordedNos.map((el, index) => <li key={index}>- {el}</li>);
 
-  return( 
+    setRecordeNos([...recordeNos, no]);
+    setNo("");
+  };
+
+  const li = recordeNos.map((el, index) => <li key={index}>- {el}</li>);
+
+  return (
     <>
       <h1>숫자기록</h1>
-      <hr/>
-      <input type="number" className="input input-bordered input-warning w-full max-w-xs" value={no} onChange={(e) => setNo(e.target.valueAsNumber)} />
-      <button type="button" className="btn btn-active"  onClick={saveNo}>기록</button>
-      <hr />
-      <h1>기록된 숫자 v1 : [{recordedNos.join(",")}]</h1>
-      <hr />
-      <h1>기록된 숫자 v2 : <ul>{li}</ul></h1>
-      <h1>기록된 숫자 v2-2 : <ul>{recordedNos.map((el,index)=> (<li key={index}>-{el}</li>))}</ul></h1>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          saveNo();
+        }}
+      >
+        <input
+          type="number"
+          value={no}
+          onChange={(e) => setNo(e.target.valueAsNumber)}
+          className="input w-full max-w-xs"
+        />
+        <button type="submit" className="btn btn-outline">
+          기록
+        </button>
+      </form>
+
+      <br />
+
+      <h1>기록된 숫자 v1: {recordeNos.join(",")}</h1>
+
+      <br />
+
+      <h1>
+        기록된 숫자 v2 : <ul>{li}</ul>
+      </h1>
+
+      <br />
+
+      <h1>기록된 숫자 v2-1</h1>
+      <ul>
+        {recordeNos.map((el, index) => (
+          <li key={index}>- {el}</li>
+        ))}
+      </ul>
     </>
-    );
+  );
 }
 
 export default NoRecord;
