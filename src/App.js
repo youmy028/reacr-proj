@@ -1,24 +1,16 @@
 import StopWatch from "./StopWatch";
 import NumberCounter from "./NumberCounter";
 import Popup from "./Popup";
-import ProdListItem from "./ProdListItem";
 import ProdList from "./ProdList";
-import "./App.css";
 import NoRecord from "./NoRecord";
 import FormEx from "./FormEx";
-import FormEx2 from "./FormEx2 copy";
+import Notice from "./Notice";
+
+import "./App.css";
 function App() {
   return (
     <>
-      {/* <StopWatch/> */}
-      {/* <NumberCounter/> */}
-      {/* <h1 className="text-3xl font-bold underline text-red-600">Hello world!</h1> */}
-      {/* <button className="btn btn-active btn-primary">Button</button> */}
-      {/* <Popup/> */}
-      {/*<ProdList className="container mx-auto"/>*/}
-      {/* <NoRecord/> */}
-      {/* <FormEx /> */}
-      <FormEx2 />
+      <Notice />
     </>
   );
 }
